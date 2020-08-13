@@ -1,0 +1,98 @@
+﻿@model Interparking.WeppApp.Models.Routes.RouteViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UpdateRoute</title>
+</head>
+<body>
+    <div>
+        <h4>RouteViewModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.IdClient)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.IdClient)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Departure)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Departure)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Destination)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Destination)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LongDeparture)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LongDeparture)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LongDestination)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LongDestination)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LatDeparture)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LatDeparture)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LatDestination)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LatDestination)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Distance)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Distance)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Fuel)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Fuel)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

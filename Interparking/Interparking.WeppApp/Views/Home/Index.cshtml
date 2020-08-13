@@ -1,0 +1,12 @@
+﻿@using Interparking.WeppApp.Infrastructure.Principal
+<br />
+<br />
+<br />
+
+User Id : @((HttpContext.Current.User as CustomPrincipal).Id)<br />
+Email   : @((HttpContext.Current.User as CustomPrincipal).Email) <br />
+Jwt     : @((HttpContext.Current.User as CustomPrincipal).Token)<br />
+
+
+
+

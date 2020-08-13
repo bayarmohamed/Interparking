@@ -1,0 +1,102 @@
+{
+  "Routes": [
+    //{
+    //  "DownstreamPathTemplate": "/api/v1/user",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 52873
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/getUser",
+    //  "Key": "User",
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "MyJwtKey",
+    //    "AllowedScopes": []
+    //  }
+    //},
+
+    {
+      "DownstreamPathTemplate": "/api/v1/User",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 52873
+        }
+      ],
+      "UpstreamPathTemplate": "/User",
+      "Key": "User"
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Auth",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 53050
+        }
+      ],
+      "UpstreamPathTemplate": "/Auth",
+      "Key": "Auth"
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Routes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 53399
+        }
+      ],
+      "UpstreamPathTemplate": "/Routes",
+      "Key": "Routes"
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Routes/PostUserById",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 53399
+        }
+      ],
+      "UpstreamPathTemplate": "/RoutesById",
+      "Key": "RoutesById"
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Routes/PostRouteById",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 53399
+        }
+      ],
+      "UpstreamPathTemplate": "/RoutesByRouteId",
+      "Key": "RoutesByRouteId"
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Parking",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 53399
+        }
+      ],
+      "UpstreamPathTemplate": "/Parkings",
+      "Key": "Parkings"
+
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:52838"
+  }
+}

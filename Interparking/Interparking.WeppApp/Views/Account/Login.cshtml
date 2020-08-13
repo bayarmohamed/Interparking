@@ -1,0 +1,53 @@
+﻿@model Interparking.WeppApp.Models.Account.Credential
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <link href="~/Content/Login.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <h3>Interparking</h3>
+            </div>
+
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "fadeIn second", placeholder = "Email" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "fadeIn third", placeholder = "Password" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                <input type="submit" value="Log In" class="fadeIn fourth" />
+
+            }
+
+            <!-- Remind Passowrd -->
+        <div id="formFooter">
+            @Html.ActionLink("Add User", "Index", "User")<br />
+            <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
